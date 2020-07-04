@@ -2,9 +2,9 @@
 ## Team Name: Fantastic-Four
 # Team Members
 * Prasad Thakare - thakareprasad28@yahoo.in
-* Anupam Laddha -
-* Aryan Khurana -
-* Ankit Jaiswal -
+* Anupam Laddha - anupamladdha29@gmail.com
+* Aryan Khurana - aryankhuranaindia@gmail.com
+* Ankit Jaiswal - jankitbb@gmail.com
 
 # Mentors
 * Archeel
