@@ -20,12 +20,12 @@ new people and learn new skills.
 * GitHub repo link: https://github.com/sans2801/Meetify-Submission.git
 
 # Technology Stack
-1.Python
-2.SQL
-3.Mongo
-4.Socket Programming
-5.Flask
-6.Cloud Storage API
+*  Python
+* SQL
+* Mongo
+* Socket Programming
+* Flask
+* Cloud Storage API
 
 # Project Setup and Usage
 * Modules listed in the requirements.txt must be installed
