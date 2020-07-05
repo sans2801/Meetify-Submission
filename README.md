@@ -44,8 +44,13 @@ of same interests.
 * New features such as organizing meetups
 
 # Screenshots
+![homepage](https://user-images.githubusercontent.com/56474333/86535625-4615e780-beff-11ea-8329-15599e5868ef.jpg)
 
+![meetify-screenshot](https://user-images.githubusercontent.com/56474333/86535671-942aeb00-beff-11ea-9dac-1d5062d83b46.jpg)
 
+![grpchat](https://user-images.githubusercontent.com/56474333/86535683-ab69d880-beff-11ea-84cb-b4e59091783b.png)
+
+![grpchat](https://user-images.githubusercontent.com/56474333/86535726-0ef40600-bf00-11ea-8d54-04c8044c7eea.png)
 
 
   
