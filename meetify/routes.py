@@ -23,6 +23,10 @@ interests=['Technology','Photography','Dance','Singing','College Life','Competit
 def home():
     return render_template('HomePage.html')
 
+@app.route('/aboutUs')
+def aboutUs():
+	return render_template('aboutUs.html')
+
 ##############################################################################################
 
 @app.route('/login',methods=['GET','POST'])
