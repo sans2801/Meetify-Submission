@@ -6,9 +6,9 @@ flask-login
 flask-socketio
 flask-wtf
 flask-mail
+gevent
 wtforms
 pymongo
 email_validator
-bson
 Pillow
 cloudinary
