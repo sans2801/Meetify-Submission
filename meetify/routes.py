@@ -21,7 +21,7 @@ interests=['Technology','Photography','Dance','Singing','College Life','Competit
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('HomePage.html')
+    return render_template('index.html')
 
 @app.route('/aboutUs')
 def aboutUs():
