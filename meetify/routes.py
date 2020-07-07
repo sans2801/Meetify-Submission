@@ -313,6 +313,9 @@ def games(name):
 
     elif name=='tic-tac-toe':
         return render_template('tic-tac-toe.html')
+	  
+    elif name=='meet&enlighten'
+	return render_template('Meet & Enlighten.html')
 
     return render_template('notifications.html')
 
