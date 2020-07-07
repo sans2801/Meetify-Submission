@@ -117,7 +117,7 @@ img{max-width:100%;height:auto;}
 
 .ppl{margin-left:80px;color:white;font-family:fantasy;margin-top:0px;position:absolute;top:0;}
 img{border-radius:50%;height:auto;max-width:100%;}
-.carousel-item img{border-radius:0%;height:35rem;}
+.carousel-item img{border-radius:0%;max-height:500px;}
 
 .foot{background-color:black;padding:1%;}
 section.hi .container {
