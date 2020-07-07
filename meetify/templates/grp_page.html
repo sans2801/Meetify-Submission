@@ -55,11 +55,9 @@ font-family: 'Poppins', sans-serif;
  
   <h1 style="display:inline;color:#0492C2;font-family: 'Poppins', sans-serif;">Group Info</h1></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   
       <!--<ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link "  href="#"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/241/pen_1f58a.png" style="height:40px;width:40px;"><p style="display:inline;font-size:6px !important ;">Change Name<br><span class="sr-only">(current)</span></a>
@@ -72,7 +70,6 @@ font-family: 'Poppins', sans-serif;
         </li>-->
 
 
-      </ul>
 
     </div>
   </nav>
@@ -114,9 +111,7 @@ font-family: 'Poppins', sans-serif;
           <br>
               <div class="maha">
             <p style="color:white;margin-left:5%;">Group Participants</p>
-          <br>
-
-          	<hr class="aryan">
+       
             <br>
             <div class="part">
             	{% for member in members %}
@@ -169,7 +164,7 @@ font-family: 'Poppins', sans-serif;
 
   <form method="post" enctype="multipart/form-data">
     <br>
-    <label>Chance Profile Pic</label>
+    <label>Change Profile Pic</label>
     <input type="file" name="pic" accept=".jpg,.jpeg,.png"/  required>
     <br>
     <button type="submit">Change</button>
