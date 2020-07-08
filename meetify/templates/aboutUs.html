@@ -10,7 +10,7 @@
     <title>Homepage</title>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&display=swap" rel="stylesheet"
       <link rel="icon" href="favicon (7).ico">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
@@ -19,12 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-<link href="../static/aboutStyle.css" rel="stylesheet" type="text/css" />
+<link href="{{url_for('static',filename='aboutus.css')}}" rel="stylesheet" type="text/css" />
   </head>
   <body style="width:100%;">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <img src="../static/Man.jpg" style="height:50px ;width:50px;border-radius:0%;font-family: 'Pacifico', cursive;"><a class="navbar-brand" href="#" style="font-family: 'Pacifico', cursive;"> MEETIFY</a>
+    <img src="Untitled.jpg" style="height:50px ;width:50px;border-radius:0%;font-family: 'Pacifico', cursive;"><a class="navbar-brand" href="#" style="font-family: 'Pacifico', cursive;"> MEETIFY</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,15 +32,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/login">LOG IN<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">LOG IN<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/signup">SIGN UP</a>
+          <a class="nav-link" href="#">SIGN UP</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="/aboutUs">
-            ABOUT US
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            FEATURES
           </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Dark Mode</a>
+            <a class="dropdown-item" href="#">Join Group</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Create Group</a>
+          </div>
         </li>
 
       </ul>
@@ -57,22 +63,23 @@
   <section class="mid">
     <div class="row">
      <div class="col-lg-7 col-sm-12"><p class="Modi">
-We began our journey in 2020 under the guidance of our seniors as a part of VJTI's Coding Club:Community of Coders.<br>
-       Since then we(The Fanatstic Four) have helped many people nurture and discover their interests<br>
-       The Fantastic Four comprises of:<br>
-       1>Ankit Jaiswal<br>
-       2>Anupam Ladda<br>
-       3>Aryan Khurana<br>
-       4>Prasad Thakare<br>
-       </p>
+
+       Meetify helps one to explore and nurture one's interests.
+       Be ready to embark on your journey of learning!<br>
+       1>Inform us about your interests!<br>
+
+       2>Join groups that interest you.<br>
+       3>We will help you connect<br> with like minded people!<br>
+       4>Keep Learning and growing <br>in this process and...<br>
+       5>Help others to grow too!<br></p>
        </div>
        <div class="col-lg-5 col-sm-6">
          <div class="card container-fluid" style="width: 15rem;background-color:#B7E9F7">
-  <img class="card-img-top" src="../static/Man.jpg" alt="Card image cap" style="margin-top:10px;">
+  <img class="card-img-top" src="Untitled.jpg" alt="Card image cap" style="margin-top:10px;">
   <div class="card-body">
 
-    <p class="card-text" style="font-size:100%;margin:0px;font-family: 'Balsamiq Sans', cursive;">Any query? Get in touch with us</p>
-    <button onclick="showDetail()" class="btn btn-info" id="contact">Contact Us</button>
+    <p class="card-text" style="font-size:100%;margin:0px;font-family: 'Balsamiq Sans', cursive;"></p>
+    <a href="" type="button" class="btn btn-info">Sign Up</a>
 
   </div>
 </div>
@@ -87,18 +94,14 @@ We began our journey in 2020 under the guidance of our seniors as a part of VJTI
     </div>
 
 
-<script type="text/javascript">
-  
-  var showDetail=function(){
-    alert("Please feel free to contact us at\nmeetify4@gmail.com")
-  }
 
-</script>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+<script>
+  document.querySelector(".card-text").innerHTML=Math.floor((100000*Math.random()))+100+" Meetifiers are active upto date";
+  </script>
   </body>
 </html>
