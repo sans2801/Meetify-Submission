@@ -713,32 +713,8 @@ figure.avatar-xl > img {
     border: 0px;
 }
 
-@media screen and (max-width: 1120px) {
-    html{
-        --vh : 6.4px!important;
-    }
-    .navigation {
-        display: none;
-        position: fixed;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        z-index: 1021;
-    }
-    #chat{
-        display: none;
-        height: 100vh;
-    }
-
-    .chatbox{
-        padding: 0px;
-    }
-    #contact-information{
-        display: none;
-        width: 100vw;
-        z-index: 100;
-    }
-    #sidebar-group-chats{
-        width: 100vw;
-    }
+@media screen and (max-width:768px){
+#navigation{
+display:none;
+}
 }
