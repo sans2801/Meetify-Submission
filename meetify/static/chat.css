@@ -530,6 +530,7 @@ figure{
     border: 1px solid black;
     width: auto;
     min-width: 10px;
+    word-wrap: break-word;
 }
 
 .profile-friend{
