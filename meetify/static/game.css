@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+svg {
+    touch-action: none;
+    overflow-x: hidden;
+}
+
+.row{
+    margin: 0;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.wrapper .navigation {
+    width: 260px;
+    height: 100%;
+    background: #1e4e74;
+    background: #0e2c4e;
+}
+
+.wrapper .navigation .sidebar-nav {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.wrapper .navigation .sidebar-nav .company-name {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    align-items: center;
+    align-content: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white!important;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .navigation .sidebar-nav .company-name a{
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.wrapper .navigation .sidebar-nav ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper .navigation .sidebar-nav ul li {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.wrapper .navigation .sidebar-nav ul li a{
+    display: block;
+    padding: .625rem 1.625rem;
+    font-weight: 400;
+    transition: background .1s ease-in-out;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(233,236,239,.5);
+    border-left: 3px solid transparent;
+}
+
+
+.wrapper .navigation .sidebar-nav ul li.active.sidebar-item a {
+    border-left: 2px solid #03a9f4;
+    color: #e9ecef;
+    background-color: #0e2c4e;
+    background: linear-gradient(90deg,rgba(59,125,221,.1),rgba(59,125,221,.0875) 50%,transparent);
+}
+
+.wrapper .navigation .sidebar-nav ul li:hover a {
+    border-left: 2px solid #03a9f4;
+    color: #e9ecef;
+}
+
+.wrapper .navigation .sidebar-nav ul li.active.sidebar-item a svg{
+    stroke: #e9ecef;
+}
+
+.wrapper .navigation .sidebar-nav ul li:hover a svg{
+    stroke: #e9ecef;
+}
+
+.wrapper .navigation .sidebar-nav ul li a.sidebar-link svg {
+    margin-right: .75rem;
+    color: rgba(233,236,239,.5);
+}
+
+.feather {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.5;
+}
+
+.align-middle {
+    vertical-align: middle!important;
+}
+
+.wrapper .main {
+    width: calc(100% - 260px);
+    height: 100%;
+    background: whitesmoke;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper .main .navbar {
+    width: 100%;
+    height: 65px;
+    padding: 14px 22px!important;
+    background: #ffffff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .main .navbar div .sidebar-toggle {
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    margin-right: 1rem;
+    position: relative;
+}
+
+.hamburger, .hamburger::after, .hamburger::before {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 20px;
+    background: #495057;
+    display: block;
+    content: "";
+    transition: background .1s ease-in-out,color .1s ease-in-out;
+}
+
+.hamburger::before {
+    top: 4.5px;
+    width: 24px;
+    height: 3px;
+    position: absolute;
+}
+
+.hamburger::after {
+    bottom: 6.5px;
+    width: 16px;
+    position: absolute;
+}
+
+.wrapper .main .navbar div form .search{
+    border-radius: 0;
+    border: 1px solid rgb(223, 223, 223);
+    background: #f7f7fc;
+    width: 207px;
+    height: 35px;
+    color: #495057;
+    border-right: 0;
+}
+
+.wrapper .main .navbar div form .search:focus,
+.wrapper .main .navbar div form .search:active {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid whitesmoke;
+    border-right: 0;
+}
+
+.wrapper .main .navbar div form .search-icon {
+    border: 0;
+    border-radius: 0;
+    z-index: 2;
+    width: 44px;
+    height: 35px;
+    display: inline-block;
+    border: 1px solid rgb(223, 223, 223);
+    border-left: 0;
+    background: #f7f7fc;
+    background-color: rgb(247, 247, 252);
+    font-weight: 400;
+    color: #495057;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .25rem .7rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.wrapper .main .navbar div form .search-icon:active,
+.wrapper .main .navbar div form .search-icon:focus{
+    box-shadow: none!important;
+    border-radius: 0;
+    border: 1px solid whitesmoke;
+    border-left: 0; 
+    background: #f7f7fc;
+    color: #495057;
+}
+
+.wrapper .main .navbar div ul li {
+    color: #495057;
+    font-size: 16px;
+}
+
+.wrapper .main .navbar div ul li.dropdown .dropdown-menu {
+    color: #495057;
+    font-size: 14px;
+}
+
+.dropdown .dropdown-menu.show {
+    animation-name: dropdownAnimation;
+    animation-duration: .25s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: .875rem;
+    color: #495057;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .2rem;
+}
+
+.groups {
+    padding: 20px;
+}
+
+.groups .row h5{
+    font-size: 21px;
+    color: #000;
+}
+
+.groups .row div.col-md-4.col-3 button{
+    position: relative;
+    width: 70%;
+    height: 40px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 20px;
+    background: white;
+    color: #212529;
+    overflow: hidden;
+}
+
+.groups .row div.col-md-4.col-3 button:hover,
+.groups .row div.col-md-4.col-3 button:focus,
+.groups .row div.col-md-4.col-3 button:active {
+    border: 0;
+    color: white;
+    background: #03a9f4;
+}
+
+.groups .row .card .card-header {
+    background: white;
+    border: 0;
+    padding: 0;
+    margin-top: 10px;
+    border-bottom: 1px solid #212529;
+}
+
+.groups .row .card .card-header div .tags {
+    font-size: 14px;
+    width: 60px;
+    background: #03a9f4;
+    color: #e9ecef;
+    height: 30px;
+    margin: 10px;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.groups .row .card .card-body {
+    padding: 0px;
+}
+
+.groups .row .card .card-body div h5{
+    font-size: 16px;
+    color: #495057;
+    margin: 10px;
+    margin-top: 5px;
+    padding-right: 40px;
+}
+
+.groups .row .card .card-body div p {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    margin: 10px;
+    margin-top: 0;
+    padding-right: 40px;
+    color: #212529;
+    padding-left: 20px;
+}
+
+.groups .row .card .card-body div p span{
+    float: right;
+}
+
+.groups .row .card .card-footer {
+    padding: 0;
+    border: 0;
+    background: white;
+}
+
+.groups .row .card .card-footer div p {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    margin: 10px;
+    margin-top: 0;
+    padding-right: 40px;
+    color: #212529;
+    padding-left: 20px;
+}
+
+.groups .row .card .card-footer div p span{
+    float: right;
+}
+
+
+footer.footer{
+    background: white;
+    padding: 1rem .875rem;
+    direction: ltr;
+}
+
+@media (max-width: 900px) {
+    .wrapper .navigation {
+        display: none;
+    }
+
+    .wrapper .main{
+        width: 100vw!important;
+    }
+
+    .main .subjects-cards .d-flex{
+        margin: 0;
+    }
+
+    .main .subjects-cards .d-flex .card-item {
+        width: 76%;
+        margin-bottom: 20px;
+    }
+
+    .wrapper .main .second-part .task-manager {
+        width: 86%;
+        margin-bottom: 20px;
+    }
+
+    .wrapper .main .second-part .performance-graph{
+        width: 86%;
+        margin: 0;
+    }
+
+    .groups .row div.col-md-4.col-3 button{
+        width: 100%;
+        position: relative;
+        height: 30px;
+        font-size: 12px;
+        border: 0;
+        border-radius: 20px;
+        background: white;
+        color: #212529;
+        overflow: hidden;
+    }
+}

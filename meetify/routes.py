@@ -83,8 +83,7 @@ def user():
     elif request.method=='GET':
 	    form.username.data=current_user.username
 	    form.email.data=current_user.email
-
-    image_file=url_for('static',filename='profilepics/'+current_user.image_file)
+        
     return render_template('user.html', form=form,curr_interests=current_user.interests,curr_pic=current_user.image_file,interests=interests)
 
 ##########################################################################################
@@ -144,7 +143,7 @@ def map():
 @app.route('/notifications')
 @login_required
 def notifications():
-    return render_template('notifications.html')
+    return render_template('notifications.html',user=current_user)
 
 #############################################################################################
 

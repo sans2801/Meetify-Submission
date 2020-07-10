@@ -1,6 +1,6 @@
 body {
   font-family: 'Lato';
-  background-color: #f8f3eb;
+  background-color: white;
 }
 
 h1,
@@ -40,7 +40,7 @@ h1,p{
 }
 
 .card{
-  background-color: #f1e3cb;
+  background-color: white;
    box-shadow: 0 0 8px 1px #888;
 }
 .bg-blue {

@@ -24,7 +24,7 @@
                 
                 <ul>
                     <li class="sidebar-item active">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="/dashboard">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders align-middle">
                                 <line x1="4" y1="21" x2="4" y2="14"></line>
                                 <line x1="4" y1="10" x2="4" y2="3"></line>
@@ -40,7 +40,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="/user">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user align-middle">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
@@ -49,7 +49,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="/notifications">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list align-middle">
                                 <line x1="8" y1="6" x2="21" y2="6"></line>
                                 <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -74,25 +74,16 @@
                     <a class="sidebar-toggle d-flex" onclick="sidebar()">
                         <i class="hamburger align-self-center"></i>
                     </a>
-                    <form class="form-inline my-2 my-lg-0 d-none d-md-block">
-                        <input class="form-control search" type="search" placeholder="Search..." aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0 search-icon" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search align-middle">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </button>
-                    </form>
 
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="profile-pic-nav" src="../static/images/male.png" width="32" height="32" style="border-radius: 50%; margin-left: 10px;">
-                                Ankit Jaiswal
+                                <img src="{{ user['image_file'] }}" width="32" height="32" style="border-radius: 50%; margin-left: 10px;">
+                                {{ user['username'] }}
                             </a>
                             <div class="dropdown-menu-right dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./profile.html">
+                                <a class="dropdown-item" href="/user">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user align-middle">
                                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
@@ -100,7 +91,7 @@
                                     Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="/logout">Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -112,47 +103,36 @@
                 <div class="row mb-3">
                     <h5 class="col-md-4 col-6 ">Your Groups</h5>
                     <div class="col-md-4 col-3 d-none d-sm-block">
-                        <button>Create a new Group</button>
+                        <button onclick="document.location='/create_room'">Create a new Group</button>
                     </div>
                     <div class="col-md-4 col-3 d-none d-sm-block">
-                        <button>Join Existing Groups</button>
-                    </div>
-                    <div class="col-md-4 col-3 d-block d-md-none">
-                        <button>Create </button>
-                    </div>
-                    <div class="col-md-4 col-3 d-block d-md-none">
-                        <button>Join </button>
+                        <button onclick="document.location='/join_groups'">Join Existing Groups</button>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="card col-md-3 col-10 offset-md-0 offset-1">
+
+                    {% for room in rooms %}
+                    <div class="card col-md-3 col-10 offset-md-0 offset-1" style="padding:0;margin:2px;" onclick="document.location='/chat_page/{{room._id}}'">
+                        <img src="{{ room['profile_pic'] }}" style="width:100%;height:40%;">
                         <div class="card-header">
                             <div class="row">
-                                <div class="tags">
-                                    Tech
-                                </div>
-                                <div class="tags">Social</div>
-                                <div class="tags">
-                                    Maths
+                                <div class="tags" style="width:100%;">
+                                    {{ room['tags'][0] }}
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <h5>Group Name</h5>
+                                <h5>{{ room['room name'] }}</h5>
                             </div>
                             <div class="row">
-                                <p>Members:<span>10</span></p>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="row">
-                                <img src="../static/images/chemistry.png">
-                                <img src="../static/images/physics.png">
-                                <img src="../static/images/math.png">
+                                <p>Created By:<br>{{room['created by']}}</p>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
+
+
                 </div>
             </div>
 
